@@ -3,7 +3,7 @@ import { PublicAxiosService } from '@/services/axios'
 export class AuthService {
   static async login(user: any) {
     return await PublicAxiosService.post(`/auth/login`, {
-      email: user.login,
+      phone: user.login,
       password: user.password,
     })
   }

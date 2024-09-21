@@ -11,6 +11,7 @@
 <script setup lang="ts">
 import LDefault from '@/layouts/LDefault.vue'
 import LError from '@/layouts/LError.vue'
+import LAuth from '@/layouts/LAuth.vue'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -21,6 +22,7 @@ const layouts = new Map<any, any>()
 // *** You can set below another layout components
 layouts.set('default', LDefault)
 layouts.set('error', LError)
+layouts.set('auth', LAuth)
 
 const detectLayout = computed(() => {
   return layouts.get(route.meta.layout) || LDefault

@@ -22,16 +22,12 @@ export const useAuthStore = defineStore('auth', () => {
       password: password,
     })
       .then((res: any) => {
-        if (res?.data?.user?.role === 'ADMIN') {
-          localStorage.clear()
-          localStorage.setItem('token', JSON.stringify(res?.data?.accessToken))
-          localStorage.setItem('user', JSON.stringify(res?.data?.user))
-          localStorage.setItem('role', res?.data?.user?.role)
-          isLoggedIn.value = true
-          window.location.href = '/'
-        } else {
-          toast.error('Tizimga kirishga sizga ruxsat berilmagan!')
-        }
+        localStorage.clear()
+        localStorage.setItem('token', JSON.stringify(res?.data?.accessToken))
+        localStorage.setItem('user', JSON.stringify(res?.data?.user))
+        localStorage.setItem('role', res?.data?.user?.role)
+        isLoggedIn.value = true
+        window.location.href = '/'
       })
       .catch(() => {
         toast.error('Login yoki parol noto`g`ri!')

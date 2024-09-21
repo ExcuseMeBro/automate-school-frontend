@@ -1,3 +1,6 @@
 {
-  "hi": "Salom"
+  "hi": "Salom",
+  "enter_system": "Tizimga kirish",
+  "enter_system_description": "Tizimga kirish haqida maʼlumot",
+  "login": "Login"
 }

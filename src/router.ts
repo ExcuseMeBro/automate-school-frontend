@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import MainRoutes from '@/modules/main/routes.ts'
+import AuthRoutes from '@/modules/login/routes.ts'
+import { useAuthStore } from '@/modules/login/store.ts'
 
 const routes: Array<RouteRecordRaw> = [
+  ...AuthRoutes,
   ...MainRoutes,
   {
     path: '/:pathMatch(.*)*',
@@ -18,8 +21,22 @@ const router = createRouter({
   routes,
 })
 
-router.beforeEach(async () => {
-  // Navigation guard here
+router.beforeEach(async (to, _, next) => {
+  const authStore = useAuthStore()
+  const isAuthenticated = authStore.user !== null
+  if (to.name === 'PLogin') {
+    if (isAuthenticated) {
+      next('/')
+    }
+  }
+
+  if (to.meta.protected) {
+    if (!isAuthenticated) {
+      next('/login')
+    }
+  }
+
+  next()
 })
 
 export default router

@@ -48,11 +48,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { required } from '@vuelidate/validators'
-import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { cn } from '@/utils'
+import { Button } from '@/core/components/ui/button'
+import { Input } from '@/core/components/ui/input'
 import SvgSpinnersGooeyBalls2 from '@/core/components/icons/spinner.vue'
 import IconoirEye from '@/core/components/icons/eyeOpen.vue'
+
 import IconoirEyeClosed from '@/core/components/icons/eyeClose.vue'
 import { useForm } from '@/core/composables/useForm.ts'
 import { useAuthStore } from '@/modules/login/store.ts'
