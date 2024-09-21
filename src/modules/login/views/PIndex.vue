@@ -7,7 +7,7 @@
     >
       <div class="absolute inset-0 bg-zinc-900" />
       <div class="relative z-20 flex items-center text-lg font-medium">
-        <img src="/svg/vite.svg" alt="ASchool" class="mr-2 h-6 w-6" />
+        <img src="/logo.png" alt="ASchool" class="mr-2 h-6 w-6" />
         <span class="text-white">ASchool</span>
       </div>
     </div>
@@ -16,7 +16,7 @@
         class="mx-auto flex w-full flex-col text-center justify-center space-y-6 sm:w-[350px]"
       >
         <img
-          src="/svg/vite.svg"
+          src="/logo.png"
           alt="ASchool"
           class="w-24 md:hidden mx-auto mb-4"
         />
