@@ -13,8 +13,14 @@
             :to="item.path"
             class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
           >
-            <component :is="item.icon" class="size-5" />
+            <component :is="item.icon" class="size-5 shrink-0" />
             <span class="ms-3">{{ item.name }}</span>
+            <p
+              v-if="item.soon"
+              class="bg-green-400 rounded-md px-2 ms-2 py-1 flex items-center justify-center text-white"
+            >
+              <span class="text-xs -mt-0.5">soon</span>
+            </p>
           </router-link>
         </li>
       </ul>
@@ -49,6 +55,7 @@ interface Item {
   name: string
   path: string
   icon: any
+  soon?: boolean
   children?: Item[]
 }
 
@@ -81,8 +88,62 @@ const menuItems: Item[] = [
     name: 'O`qituvchilar',
     path: '/teachers',
     icon: defineAsyncComponent(
-      () => import('@/core/components/icons/category.vue'),
+      () => import('@/core/components/icons/profile.vue'),
     ),
+    children: [],
+  },
+  {
+    name: 'Dars soatlarini boshqarish',
+    path: '/404',
+    icon: defineAsyncComponent(
+      () => import('@/core/components/icons/star.vue'),
+    ),
+    soon: true,
+    children: [],
+  },
+  {
+    name: 'O`quvchilar',
+    path: '/404',
+    icon: defineAsyncComponent(
+      () => import('@/core/components/icons/star.vue'),
+    ),
+    soon: true,
+    children: [],
+  },
+  {
+    name: 'Xonalar',
+    path: '/404',
+    icon: defineAsyncComponent(
+      () => import('@/core/components/icons/star.vue'),
+    ),
+    soon: true,
+    children: [],
+  },
+  {
+    name: 'Tashriflar',
+    path: '/404',
+    icon: defineAsyncComponent(
+      () => import('@/core/components/icons/star.vue'),
+    ),
+    soon: true,
+    children: [],
+  },
+  {
+    name: 'Dars almashtirishlar',
+    path: '/404',
+    icon: defineAsyncComponent(
+      () => import('@/core/components/icons/star.vue'),
+    ),
+    soon: true,
+    children: [],
+  },
+  {
+    name: 'SMS xabarlar',
+    path: '/404',
+    icon: defineAsyncComponent(
+      () => import('@/core/components/icons/star.vue'),
+    ),
+    soon: true,
     children: [],
   },
 ]
