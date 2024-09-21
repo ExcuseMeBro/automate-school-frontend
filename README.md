@@ -1,6 +1,6 @@
-# Vue 3 Boilerplate template
+# Automate School 🏫
 
-## Project contains these technology
+## Project contains these technology 🚀
 
 - Vue 3
 - TypeScript
