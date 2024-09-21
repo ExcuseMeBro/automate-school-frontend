@@ -6,7 +6,7 @@
 - TypeScript
 - Vite
 - TailwindCSS
-- Daisy UI
+- Shadcn-vue
 - i18n
 - Vue-router
 - Pinia (Write Composition API way)
