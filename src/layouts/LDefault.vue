@@ -1,6 +1,7 @@
 <template>
   <main>
     <CNavbar />
+    <CSidebar />
     <div class="px-1 py-4 md:p-4 sm:ml-64">
       <div class="p-1 md:p-4 mt-14">
         <slot />
@@ -13,6 +14,7 @@
 import CNavbar from '@/core/components/layout/CNavbar.vue'
 import { onMounted } from 'vue'
 import { initFlowbite } from 'flowbite'
+import CSidebar from '@/core/components/layout/CSidebar.vue'
 
 onMounted(() => {
   initFlowbite()
