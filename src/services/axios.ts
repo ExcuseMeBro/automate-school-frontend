@@ -17,13 +17,4 @@ const Axios = (contentType?: string) =>
     },
   })
 
-export const AxiosForPayment = (token?: string) =>
-  axios.create({
-    baseURL: import.meta.env.VITE_PAYMENT_API_URL,
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: 'Bearer ' + token,
-    },
-  })
-
 export const AxiosService = Axios
