@@ -1,5 +1,13 @@
 # Automate School 🏫
-
+---
+## Technical requirements / docs 🗃️
+---
+https://excalidraw.com/#json=iLPqp6rSLCUa5e25OgJKP,BBDyIwKOUa5pPA-ApGEDOg
+---
+## Frontend (aschool.vercel.app) 🔥
+---
+https://aschool.vercel.app
+---
 ## Project contains these technology 🚀
 
 - Vue 3
