@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 // *** STYLES ***
 import '@/assets/css/tailwind.css'
 import '@/assets/css/style.css'
+import 'vue-multiselect/dist/vue-multiselect.css'
 // ---------------------------
 // *** PLUGINS ***
 import i18n from '@/core/plugins/i18n'

@@ -3,6 +3,7 @@ import MainRoutes from '@/modules/main/routes.ts'
 import AuthRoutes from '@/modules/login/routes.ts'
 import SubjectRoutes from '@/modules/subjects/routes.ts'
 import GroupRoutes from '@/modules/groups/routes.ts'
+import TeacherRoutes from '@/modules/teachers/routes.ts'
 import { useAuthStore } from '@/modules/login/store.ts'
 
 const routes: Array<RouteRecordRaw> = [
@@ -10,6 +11,7 @@ const routes: Array<RouteRecordRaw> = [
   ...MainRoutes,
   ...SubjectRoutes,
   ...GroupRoutes,
+  ...TeacherRoutes,
   {
     path: '/:pathMatch(.*)*',
     name: '404',

@@ -85,14 +85,6 @@ const menuItems: Item[] = [
     ),
     children: [],
   },
-  {
-    name: 'Dars soatlari',
-    path: '/hours',
-    icon: defineAsyncComponent(
-      () => import('@/core/components/icons/clock.vue'),
-    ),
-    children: [],
-  },
 ]
 </script>
 
