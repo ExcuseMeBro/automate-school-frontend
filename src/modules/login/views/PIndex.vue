@@ -10,6 +10,30 @@
         <img src="/logo.png" alt="ASchool" class="mr-2 h-6 w-6" />
         <span class="text-white">ASchool</span>
       </div>
+      <div
+        class="text-sm mt-10 rounded border w-fit p-3 z-20 text-muted-foreground"
+      >
+        <p>login: +998901234567</p>
+        <p>password: Secret1!</p>
+      </div>
+      <div
+        class="z-20 grid grid-cols-2 gap-20 mt-10 absolute bottom-5 left-1/2 -translate-x-1/2"
+      >
+        <a
+          href="https://github.com/ScalaUz/automate-school-frontend"
+          class="mt-10 flex items-center gap-2 whitespace-nowrap"
+        >
+          <img src="/github.png" alt="github" class="h-5 w-5 rounded-full" />
+          FRONTEND REPO
+        </a>
+        <a
+          href="https://github.com/ScalaUz/automate-school-backend"
+          class="mt-10 flex items-center gap-2 whitespace-nowrap"
+        >
+          <img src="/github.png" alt="github" class="h-5 rounded-full" />
+          BACKEND REPO
+        </a>
+      </div>
     </div>
     <div class="lg:p-8">
       <div
