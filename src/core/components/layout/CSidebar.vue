@@ -66,6 +66,7 @@ const menuItems: Item[] = [
     icon: defineAsyncComponent(
       () => import('@/core/components/icons/dashboard.vue'),
     ),
+    soon: false,
     children: [],
   },
   {
@@ -74,6 +75,7 @@ const menuItems: Item[] = [
     icon: defineAsyncComponent(
       () => import('@/core/components/icons/group.vue'),
     ),
+    soon: false,
     children: [],
   },
   {
@@ -82,6 +84,7 @@ const menuItems: Item[] = [
     icon: defineAsyncComponent(
       () => import('@/core/components/icons/category.vue'),
     ),
+    soon: false,
     children: [],
   },
   {
@@ -90,6 +93,7 @@ const menuItems: Item[] = [
     icon: defineAsyncComponent(
       () => import('@/core/components/icons/profile.vue'),
     ),
+    soon: false,
     children: [],
   },
   {

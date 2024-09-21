@@ -4,7 +4,6 @@ import AuthRoutes from '@/modules/login/routes.ts'
 import SubjectRoutes from '@/modules/subjects/routes.ts'
 import GroupRoutes from '@/modules/groups/routes.ts'
 import TeacherRoutes from '@/modules/teachers/routes.ts'
-import { useAuthStore } from '@/modules/login/store.ts'
 
 const routes: Array<RouteRecordRaw> = [
   ...AuthRoutes,
@@ -17,6 +16,7 @@ const routes: Array<RouteRecordRaw> = [
     name: '404',
     meta: {
       layout: 'error',
+      protected: true,
     },
     component: () => import('@/modules/PError.vue'),
   },
@@ -28,8 +28,7 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to, _, next) => {
-  const authStore = useAuthStore()
-  const isAuthenticated = authStore.user !== null
+  const isAuthenticated = localStorage.getItem('token')
   if (to.name === 'PLogin') {
     if (isAuthenticated) {
       next('/')

@@ -6,6 +6,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
     name: 'PTimetable',
     meta: {
       layout: 'default',
+      protected: true,
     },
     component: () => import('@/modules/main/views/PIndex.vue'),
   },

@@ -24,8 +24,6 @@ export const useAuthStore = defineStore('auth', () => {
       .then((res: any) => {
         localStorage.clear()
         localStorage.setItem('token', JSON.stringify(res?.data?.accessToken))
-        localStorage.setItem('user', JSON.stringify(res?.data?.user))
-        localStorage.setItem('role', res?.data?.user?.role)
         isLoggedIn.value = true
         window.location.href = '/'
       })
@@ -39,8 +37,8 @@ export const useAuthStore = defineStore('auth', () => {
 
   function logout() {
     AuthService.logout()
-    user.value = null
-    window.location.reload()
+    localStorage.clear()
+    window.location.href = '/login'
   }
 
   return {
