@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import MainRoutes from '@/modules/main/routes.ts'
 import AuthRoutes from '@/modules/login/routes.ts'
+import SubjectRoutes from '@/modules/subjects/routes.ts'
 import { useAuthStore } from '@/modules/login/store.ts'
 
 const routes: Array<RouteRecordRaw> = [
   ...AuthRoutes,
   ...MainRoutes,
+  ...SubjectRoutes,
   {
     path: '/:pathMatch(.*)*',
     name: '404',
