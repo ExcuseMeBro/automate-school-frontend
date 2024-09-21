@@ -7,7 +7,6 @@ import '@/assets/css/style.css'
 // ---------------------------
 // *** PLUGINS ***
 import i18n from '@/core/plugins/i18n'
-import VeeValidatePlugin from '@/core/plugins/veeValidation'
 import router from './router'
 import { vMaska } from 'maska'
 import { createPinia } from 'pinia'
@@ -20,6 +19,5 @@ const app = createApp(App)
 app.use(pinia)
 app.use(router)
 app.use(i18n)
-app.use(VeeValidatePlugin)
 app.directive('maska', vMaska)
 app.mount('#app')
