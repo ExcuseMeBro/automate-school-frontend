@@ -13,6 +13,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'vue/no-unused-vars': 'warn',
     'no-unused-vars': 'warn',
+    'vue/multi-word-component-names': 'off',
   },
   settings: {
     'import/resolver': {

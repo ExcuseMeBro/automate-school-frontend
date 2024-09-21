@@ -5,13 +5,12 @@
         <img src="@/assets/svg/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
-
-    <HelloWorld :msg="$t('hi')" />
+    <Button>Hello</Button>
   </div>
 </template>
 
 <script setup lang="ts">
-import HelloWorld from '@/core/components/HelloWorld.vue'
+import { Button } from '@/core/components/ui/button'
 </script>
 
 <style scoped>
